@@ -1,2 +1,5 @@
-# defectivepixel
-Try it [here](https://rawgit.com/mulian/defectivepixel/master/index.html)
+# Detect Defective Pixel (Finde Pixel Fehler)
+This Page [here](https://rawgit.com/mulian/defectivepixel/master/index.html), will show your many colors in Fullscreen (if browser is in Fullscreen-Mode).
+With this Page you could easyly detect defective pixel.
+
+Pause/Resume with any Key!
