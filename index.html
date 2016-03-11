@@ -1,0 +1,43 @@
+<html>
+  <body>
+    <div id='info' style='text-align: center'>
+      Pause/Resume with any Key!
+    </div>
+    <script type="text/javascript">
+var body = document.getElementsByTagName('body')[0];
+var info = document.getElementById('info');
+var white = parseInt("FFFFFF", 16);
+var i = 0;
+function add0(value,toLength) {
+  for(var t=value.length;t<toLength;t++) {
+    value=value+"0";
+  }
+  return value;
+}
+var timer = undefined;
+function setColor() {
+  console.log(add0(i.toString(16),6));
+  window.body.style.backgroundColor = '#'+add0(i.toString(16),6);
+  i+=parseInt("FFF", 16);
+  if (i<=white) {
+    timer= setTimeout(setColor,100);
+  }
+};
+function start() {
+  info.style.display="none";
+  setColor(i);
+}
+
+setTimeout(start,4000)
+
+body.addEventListener ('keydown', function (event) {
+   if(timer==undefined) {
+     timer = setTimeout(setColor,500);
+   } else {
+     clearTimeout(timer);
+     timer = undefined;
+   }
+});
+    </script>
+  </body>
+</html>
